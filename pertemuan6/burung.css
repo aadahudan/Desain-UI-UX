@@ -1,0 +1,327 @@
+:root {
+    color-scheme: light;
+    --ink: #202b27;
+    --muted: #63716b;
+    --forest: #244b3c;
+    --paper: #f5f4ec;
+    --line: #d9ded3;
+    --white: #fffef9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(ellipse at 12% 8%, rgba(214, 225, 198, 0.56), transparent 34rem),
+        var(--paper);
+    color: var(--ink);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    line-height: 1.75;
+}
+
+#header {
+    min-height: 390px;
+    padding: 76px max(7vw, 24px) 64px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    background: linear-gradient(135deg, #244b3c, #416b4c 72%, #668a58);
+    color: var(--white);
+    text-align: center;
+}
+
+#header h1 {
+    max-width: 820px;
+    margin: 0 0 22px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.3rem, 6vw, 4.4rem);
+    font-weight: 500;
+    line-height: 1.08;
+}
+
+#header blockquote {
+    max-width: 570px;
+    margin: 0;
+    color: #e1eadb;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+#soekarno {
+    display: inline-block;
+    margin-top: 12px;
+    color: #fff;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.navigasi {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(255, 254, 249, 0.94);
+    list-style: none;
+    backdrop-filter: blur(12px);
+}
+
+.navigasi a {
+    display: block;
+    padding: 7px 18px;
+    border-radius: 3px;
+    color: var(--forest);
+    font-size: 0.9rem;
+    font-weight: 650;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.navigasi a:hover,
+.navigasi a:focus-visible {
+    background: var(--forest);
+    color: white;
+}
+
+.gambar,
+.koleksi {
+    display: grid;
+    gap: 18px;
+    width: min(100% - 40px, 1040px);
+    margin: 48px auto;
+}
+
+.gambar {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: stretch;
+}
+
+.gambar img,
+.koleksi img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    border-radius: 4px;
+    background: #e1e5d9;
+    object-fit: cover;
+}
+
+.gambar img:first-child {
+    min-height: 380px;
+}
+
+.isi,
+#profil,
+#beternak {
+    width: min(100% - 40px, 820px);
+    margin: 0 auto 42px;
+}
+
+.isi p {
+    margin: 0 0 18px;
+    color: #46534d;
+    font-size: 1.05rem;
+}
+
+.jawa {
+    color: var(--forest);
+    font-weight: 700;
+}
+
+#profil,
+#beternak {
+    padding: 30px 34px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--white);
+}
+
+#profil h3,
+#beternak h3 {
+    margin: 0 0 18px;
+    color: var(--forest);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+#profil ul,
+#beternak ol {
+    margin: 0;
+    padding-left: 22px;
+}
+
+#profil li,
+#beternak li {
+    padding-left: 5px;
+    color: #46534d;
+}
+
+#profil li + li,
+#beternak ol > li + li {
+    margin-top: 12px;
+}
+
+#beternak h4 {
+    margin: 0 0 5px;
+    color: var(--ink);
+    font-size: 1.05rem;
+}
+
+#beternak p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.koleksi {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 52px;
+}
+
+.koleksi img {
+    min-height: 170px;
+    aspect-ratio: 1;
+}
+
+.promo {
+    width: 100%;
+    margin: 60px 0 0;
+    padding: 52px 24px 44px;
+    background: var(--forest);
+    color: var(--white);
+    text-align: center;
+}
+
+.promo h2 {
+    margin: 0 auto 18px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.promo h3 {
+    margin: 0;
+    color: #e1eadb;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.promo strong {
+    color: #d7e9a4;
+    font-size: 1.35rem;
+}
+
+#Wa {
+    color: #d7e9a4;
+    font-weight: 700;
+}
+
+.promo h4 {
+    margin: 28px 0 8px;
+    color: #e1eadb;
+    font-size: 0.9rem;
+}
+
+.promo ol {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.promo a {
+    color: white;
+    text-decoration-color: #a8c28d;
+    text-underline-offset: 4px;
+}
+
+.promo a:hover,
+.promo a:focus-visible {
+    color: #d7e9a4;
+}
+
+@media (max-width: 640px) {
+    #header {
+        min-height: 340px;
+        padding: 56px 24px;
+    }
+
+    #header h1 {
+        font-size: 2.5rem;
+    }
+
+    .navigasi {
+        gap: 0;
+        padding: 9px 6px;
+    }
+
+    .navigasi a {
+        padding: 8px 12px;
+        font-size: 0.82rem;
+    }
+
+    .gambar {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 28px auto;
+    }
+
+    .gambar img,
+    .gambar img:first-child {
+        min-height: 190px;
+    }
+
+    #profil,
+    #beternak {
+        padding: 24px 20px;
+    }
+
+    #profil h3,
+    #beternak h3 {
+        font-size: 1.55rem;
+    }
+
+    .koleksi {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 36px auto;
+    }
+
+    .koleksi img {
+        min-height: 140px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
